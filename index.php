@@ -11,8 +11,12 @@ and open the template in the editor.
     </head>
     <body>
         <?php
-        phpinfo();
-        echo "Cambios";
+        $login_inc = TRUE;
+        do {
+            if (($u == $user) && ($p == $pass)) {
+                $login_inc = FALSE;
+            }
+        } while ($login_inc)
         ?>
     </body>
 </html>
